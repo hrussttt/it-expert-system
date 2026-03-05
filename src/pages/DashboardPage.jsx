@@ -16,6 +16,7 @@ export default function DashboardPage() {
         if (user) {
             fetchProjects();
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [user, profile]);
 
     const fetchProjects = async () => {
@@ -33,7 +34,8 @@ export default function DashboardPage() {
             const { data, error } = await query;
             if (error) throw error;
             setProjects(data || []);
-        } catch {
+        } catch (err) {
+            console.error('Error fetching projects:', err);
         } finally {
             setLoading(false);
         }
@@ -51,14 +53,6 @@ export default function DashboardPage() {
         if (budget >= 1000000) return `$${(budget / 1000000).toFixed(1)}M`;
         if (budget >= 1000) return `$${(budget / 1000).toFixed(0)}K`;
         return `$${budget}`;
-    };
-
-    const formatDate = (date) => {
-        return new Date(date).toLocaleDateString(t === 'uk' ? 'uk-UA' : 'en-US', {
-            month: 'short',
-            day: 'numeric',
-            year: 'numeric',
-        });
     };
 
     // Get stats from projects

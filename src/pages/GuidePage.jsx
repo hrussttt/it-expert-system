@@ -2,8 +2,7 @@ import { useTranslation } from 'react-i18next';
 import Layout from '../components/Layout';
 
 export default function GuidePage() {
-    const { t, i18n } = useTranslation();
-    const lang = i18n.language;
+    const { t } = useTranslation();
 
     return (
         <Layout>

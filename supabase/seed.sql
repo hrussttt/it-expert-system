@@ -74,7 +74,56 @@ INSERT INTO knowledge_projects (name, description, team_size, budget, duration_m
 
 -- Risk-Driven cases
 ('Financial Trading Platform', 'High-frequency trading system upgrade', 15, 1200000, 12, 'critical', 'development', 'critical', 'expert', 'moderate', 'stable', 'cutting_edge', '11111111-0001-0001-0001-000000000008', 'success'),
-('Nuclear Plant Monitoring', 'Safety monitoring system for power plant', 25, 3000000, 24, 'critical', 'development', 'critical', 'expert', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000008', 'success');
+('Nuclear Plant Monitoring', 'Safety monitoring system for power plant', 25, 3000000, 24, 'critical', 'development', 'critical', 'expert', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000008', 'success'),
+
+-- 32 additional projects to reach 50 records
+-- Scrum
+('FinTech Payment Gateway', 'New payment processing system integration', 10, 250000, 6, 'high', 'development', 'high', 'senior', 'active', 'evolving', 'moderate', '11111111-0001-0001-0001-000000000001', 'success'),
+('EdTech Learning Platform', 'Platform for online course delivery', 6, 95000, 5, 'medium', 'development', 'medium', 'mixed', 'active', 'evolving', 'moderate', '11111111-0001-0001-0001-000000000001', 'success'),
+('Social Media AnalyticsApp', 'Dashboard for tracking social metrics', 5, 85000, 4, 'medium', 'development', 'medium', 'mixed', 'moderate', 'evolving', 'moderate', '11111111-0001-0001-0001-000000000001', 'success'),
+('Crypto Wallet App', 'Mobile crypto wallet for consumers', 14, 400000, 8, 'high', 'development', 'critical', 'senior', 'active', 'evolving', 'cutting_edge', '11111111-0001-0001-0001-000000000001', 'partial'),
+
+-- Kanban
+('Helpdesk Tool Maintenance', 'Bug fixes for IT helpdesk platform', 3, 40000, 12, 'low', 'support', 'low', 'mixed', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000002', 'success'),
+('Marketing Website Updates', 'Continuous flow of landing page updates', 2, 30000, 12, 'low', 'support', 'low', 'junior', 'moderate', 'stable', 'established', '11111111-0001-0001-0001-000000000002', 'success'),
+('E-commerce Bug Triage', 'Ongoing e-commerce bug resolution', 5, 80000, 12, 'medium', 'support', 'medium', 'mixed', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000002', 'success'),
+('Legacy Database Support', 'Tuning and support for Oracle DBs', 3, 70000, 12, 'medium', 'support', 'low', 'senior', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000002', 'success'),
+
+-- Waterfall
+('Aerospace Control Software', 'Flight control software update', 30, 1500000, 24, 'critical', 'development', 'critical', 'expert', 'moderate', 'stable', 'established', '11111111-0001-0001-0001-000000000003', 'success'),
+('Hospital ERP Implementation', 'Full hospital ERP rollout', 20, 950000, 18, 'high', 'integration', 'high', 'expert', 'moderate', 'stable', 'established', '11111111-0001-0001-0001-000000000003', 'partial'),
+('Defense Logistics System', 'Logistics system for defense contractor', 25, 1200000, 18, 'critical', 'development', 'high', 'senior', 'moderate', 'stable', 'established', '11111111-0001-0001-0001-000000000003', 'success'),
+('Municipal Tax Portal', 'Local government tax collection portal', 12, 450000, 12, 'high', 'development', 'medium', 'mixed', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000003', 'success'),
+
+-- SAFe (Scaled Agile)
+('Global Core Banking Replacement', 'Replacing legacy core banking across regions', 120, 8000000, 36, 'critical', 'migration', 'critical', 'mixed', 'active', 'evolving', 'moderate', '11111111-0001-0001-0001-000000000004', 'partial'),
+('Telco Billing System Rewrite', 'Overhaul of national telco billing platform', 80, 4500000, 24, 'critical', 'development', 'high', 'senior', 'moderate', 'evolving', 'established', '11111111-0001-0001-0001-000000000004', 'success'),
+('International Airline Booking', 'Unified booking platform for airline alliance', 65, 3000000, 18, 'critical', 'integration', 'high', 'senior', 'active', 'evolving', 'moderate', '11111111-0001-0001-0001-000000000004', 'success'),
+('Automotive OS Development', 'Infotainment OS for car manufacturer', 55, 2800000, 18, 'high', 'development', 'high', 'mixed', 'active', 'evolving', 'cutting_edge', '11111111-0001-0001-0001-000000000004', 'success'),
+
+-- Lean
+('Startup MVP Launch', 'Lean launch of an AI-based idea', 3, 25000, 2, 'medium', 'development', 'high', 'senior', 'embedded', 'volatile', 'cutting_edge', '11111111-0001-0001-0001-000000000005', 'success'),
+('Internal Operations Tool', 'Time tracking automation for staff', 2, 15000, 1, 'low', 'development', 'low', 'mixed', 'active', 'evolving', 'established', '11111111-0001-0001-0001-000000000005', 'success'),
+('Simple Retail POS', 'Basic point of sale for small store', 4, 30000, 3, 'low', 'development', 'low', 'mixed', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000005', 'success'),
+('Data Cleaning Script', 'One-off migration data cleaner', 1, 5000, 1, 'low', 'migration', 'low', 'senior', 'minimal', 'stable', 'moderate', '11111111-0001-0001-0001-000000000005', 'success'),
+
+-- Hybrid Agile-Waterfall
+('Hardware-Software Co-design', 'Custom hardware with embedded software', 20, 850000, 14, 'high', 'development', 'high', 'senior', 'moderate', 'stable', 'moderate', '11111111-0001-0001-0001-000000000006', 'success'),
+('Legacy App Cloud Migration', 'Phased move of monolith to microservices', 15, 600000, 10, 'high', 'migration', 'medium', 'mixed', 'minimal', 'stable', 'moderate', '11111111-0001-0001-0001-000000000006', 'success'),
+('Supply Chain Platform', 'Blockchain-based supply chain tracker', 12, 500000, 9, 'high', 'development', 'high', 'senior', 'moderate', 'evolving', 'cutting_edge', '11111111-0001-0001-0001-000000000006', 'partial'),
+('University Student Portal', 'New portal with sequential rollout', 10, 250000, 8, 'medium', 'development', 'medium', 'mixed', 'minimal', 'evolving', 'established', '11111111-0001-0001-0001-000000000006', 'success'),
+
+-- Rapid Prototyping
+('VR Training Simulator', 'VR proof of concept for medical training', 4, 80000, 2, 'medium', 'research', 'high', 'expert', 'embedded', 'volatile', 'cutting_edge', '11111111-0001-0001-0001-000000000007', 'success'),
+('AI Image Generator GUI', 'Interface for new model capabilities', 3, 45000, 2, 'medium', 'research', 'medium', 'senior', 'active', 'volatile', 'cutting_edge', '11111111-0001-0001-0001-000000000007', 'success'),
+('Retail AR Mirror App', 'Augmented reality mirror concept', 5, 90000, 3, 'high', 'research', 'high', 'senior', 'active', 'volatile', 'cutting_edge', '11111111-0001-0001-0001-000000000007', 'partial'),
+('Voice Assistant Integration', 'POC for home assistant integration', 2, 25000, 1, 'low', 'research', 'medium', 'expert', 'active', 'volatile', 'cutting_edge', '11111111-0001-0001-0001-000000000007', 'success'),
+
+-- Risk-Driven
+('Autonomous Vehicle System', 'Lidar data processing core module', 35, 4500000, 18, 'critical', 'development', 'critical', 'expert', 'embedded', 'stable', 'cutting_edge', '11111111-0001-0001-0001-000000000008', 'success'),
+('Spacecraft Telemetry Upgrade', 'Ground control telemetry patch', 15, 2000000, 12, 'critical', 'support', 'critical', 'expert', 'minimal', 'stable', 'established', '11111111-0001-0001-0001-000000000008', 'success'),
+('National Energy Grid Backend', 'Data routing for smart grid', 30, 3500000, 20, 'critical', 'development', 'critical', 'expert', 'minimal', 'stable', 'moderate', '11111111-0001-0001-0001-000000000008', 'partial'),
+('Defense Cyber Security Tool', 'Real-time threat detection system', 20, 1800000, 14, 'critical', 'development', 'high', 'expert', 'active', 'evolving', 'cutting_edge', '11111111-0001-0001-0001-000000000008', 'success');
 
 
 -- ===================== STRATEGY RULES =====================

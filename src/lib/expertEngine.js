@@ -175,7 +175,7 @@ function analyzeScenarios(project, strategy, similarity) {
 
     return {
         optimistic: {
-            successRate: Math.min(99, realisticSuccess + 15),
+            successRate: Math.round(Math.min(99, realisticSuccess + 15)),
             budgetVariance: -Math.round(budgetVariance * 0.3),
             timeVariance: -Math.round(timeVariance * 0.3),
             description: {
@@ -193,7 +193,7 @@ function analyzeScenarios(project, strategy, similarity) {
             },
         },
         pessimistic: {
-            successRate: Math.max(10, realisticSuccess - 25),
+            successRate: Math.round(Math.max(10, realisticSuccess - 25)),
             budgetVariance: Math.round(budgetVariance * 1.5),
             timeVariance: Math.round(timeVariance * 1.5),
             description: {

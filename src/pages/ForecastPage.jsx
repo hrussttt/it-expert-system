@@ -33,6 +33,7 @@ export default function ForecastPage() {
     useEffect(() => {
         fetchProject();
         fetchSavedRuns();
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [id]);
 
     async function fetchProject() {
@@ -128,9 +129,9 @@ export default function ForecastPage() {
 
                 // Refresh saved runs only if save succeeded
                 await fetchSavedRuns();
-            } catch (dbError) {
+            } catch (error) { // renamed from dbError as it was unused and we just log
                 // Database save failed - that's okay, continue without it
-                console.log('Could not save forecast run (database table may not exist yet)');
+                console.log('Could not save forecast run (database table may not exist yet)', error);
             }
 
         } catch (error) {

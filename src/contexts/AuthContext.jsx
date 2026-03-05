@@ -3,12 +3,29 @@ import { supabase } from '../lib/supabase';
 
 const AuthContext = createContext({});
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useAuth = () => useContext(AuthContext);
 
 export function AuthProvider({ children }) {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
   const [loading, setLoading] = useState(true);
+
+  const fetchProfile = async (userId) => {
+    try {
+      const { data } = await supabase
+        .from('profiles')
+        .select('*')
+        .eq('id', userId)
+        .single();
+
+      setProfile(data);
+    } catch (err) {
+      // Profile fetch failed - this is OK, user can still be logged in
+      console.error('Profile fetch failed', err);
+      setProfile(null);
+    }
+  };
 
   useEffect(() => {
     // Get initial session
@@ -35,20 +52,6 @@ export function AuthProvider({ children }) {
     return () => subscription.unsubscribe();
   }, []);
 
-  const fetchProfile = async (userId) => {
-    try {
-      const { data } = await supabase
-        .from('profiles')
-        .select('*')
-        .eq('id', userId)
-        .single();
-
-      setProfile(data);
-    } catch (error) {
-      // Profile fetch failed - this is OK, user can still be logged in
-      setProfile(null);
-    }
-  };
 
   const signIn = async (email, password) => {
     return await supabase.auth.signInWithPassword({ email, password });
